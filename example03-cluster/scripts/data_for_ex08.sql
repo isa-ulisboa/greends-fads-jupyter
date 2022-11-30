@@ -24,9 +24,7 @@ select
 		r.region_name , r.ParentCodeID, 
 		sum( case when e.education_level = 'None' then e.value else null END) as e_none,
 		sum( case when e.education_level = 'Basic' then e.value else NULL END) as e_basic,
-		SUM( case when e.education_level = 'Secondary / post-secondary' then e.value
-else NULL
-END) as e_secondary,
+		SUM( case when e.education_level = 'Secondary / post-secondary' then e.value else NULL END) as e_secondary,
 		SUM( case when e.education_level = 'Superior' then e.value else NULL END) as e_superior
 	from
 		education e
@@ -89,9 +87,7 @@ FROM
 		r.region_name , r.ParentCodeID, 
 		sum( case when e.education_level = 'None' then e.value else null END) as e_none,
 		sum( case when e.education_level = 'Basic' then e.value else NULL END) as e_basic,
-		SUM( case when e.education_level = 'Secondary / post-secondary' then e.value
-else NULL
-END) as e_secondary,
+		SUM( case when e.education_level = 'Secondary / post-secondary' then e.value else NULL END) as e_secondary,
 		SUM( case when e.education_level = 'Superior' then e.value else NULL END) as e_superior
 	from
 		education e
