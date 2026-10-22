@@ -16,7 +16,7 @@ if response.status_code == 200:
     for row in table.find_all("tr")[1:]: # skip header 
         cols = [ele.text.strip() for ele in row.find_all(["td", "th"])] 
         if len(cols) >= 3: 
-            data.append({"Country": cols, "Forest\_Area\_sq\_km": cols[5]}) 
+            data.append({"Country": cols, "Forest_Area_sq_km": cols[5]}) 
             
     df = pd.DataFrame(data) 
     print(df.head())
